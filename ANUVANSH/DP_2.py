@@ -10,12 +10,12 @@ def vowels_counter(sentence):
        Counts the number of vowels in a sentence.
 
        Args:
-            sentence (string): The sentence for which number of vowels has to be counted.
+            sentence (string): The git sentence for which number of vowels has to be counted.
        
        Returns:
             int: Number of vowels in the given sentence
     """
-    vowels = 'aeiou'
+    vowels = 'aeiouAEIOU'
     vowel_count = 0
 
     for character in sentence:
