@@ -1,4 +1,5 @@
-"""Problem Statement for August 7th(DP-1)
+"""
+Problem Statement for August 7th(DP-1)
 You are part of a team developing an advanced financial analytics platform for a 
 leading investment firm called "QuantFinTech." As part of this platform, you have been assigned 
 the task of creating a feature that allows investment analysts to quickly calculate the sum and average 
@@ -6,43 +7,55 @@ of a series of numerical data points. This feature will assist analysts in asses
 investment portfolios, evaluating risk factors, and making informed investment decisions.
 """
 
-def sum_average(nums):
-    """Calculates the sum and average of a series of numerical data points.
+def sum(floatnumbers):
+    """
+    Calculates the sum of a series of numerical data points.
     
        Args:
-            nums (list of floats): The series of numbers for which we have to calculate sum and average.
+            floatnumbers (list of floats): The  numbers to be totaled.
        
        Returns:
-            tuple: The sum(i.e tuple[0]) and average(i.e tuple[1]) of the series
+            float:total
     """
     total = 0
 
-    for k in range(0, len(nums)):
-        total = total + nums[k]
+    for i in range(0, len(floatnumbers)):
+        total = total + floatnumbers[i]
 
-    return total, total/len(nums)
+    return total
+def average(result1,n):
+    """
+    Calculates the average of a series of numerical datapoints.
+    
+       Args:
+            result1: The total of numbers for which we have to calculate average.
+            n:length of  the list
+       Returns:
+            float: The average(avg)
+    """
+    avg=result1/n    
+    return avg
 
 
 def main():
-    """This is the main function to run the QuantFinTech - Sum 
-    and Average feature."""
-
+    """
+    Main function to run the QuantFinTech - Sum 
+    and Average feature.
+    
+    """
+    numerical_list = []
     print("Welcome to QuantFinTech Data Analytics!")
     
-    num_data_points = input("Please enter a series of numerical data points separated by spaces: ").split()
-    nums_list = []
-
-
-    for i in num_data_points:
-        nums_list.append(float(i))
-
+    numerical_datapoints = input("Please enter a series of numerical data points separated by spaces: ").split()
+    
+    for i in numerical_datapoints:
+        numerical_list.append(float(i))
+    n=len(numerical_list)
     print("\nThank you for providing the data points.")
-    result = sum_average(nums_list)
-    sum = result[0]
-    average = result[1]
-
-    print("The sum of the numbers is:", sum)
-    print("The average of the numbers is:", average) 
+    result1 = sum(numerical_list)
+    result2 = average(result1,n)
+    print("\nThe sum of the numbers is:", result1)
+    print("\nThe average of the numbers is:", result2) 
 
 
 if __name__ == '__main__':
