@@ -10,19 +10,26 @@ along with additional functionality to enhance their product management capabili
 
 """
 
-def product_listing():
+def sort_product(products):
+
+    sorted_products = sorted(products) #sort the list
+    return sorted_products
+
+def main():
+
     print("Welcome to MarketSquare Product Management!")
-    product_input = input("Please enter your product names, separated by commas:")
 
-    #using split function to convert input string into list
-    product = [name.strip() for name in product_input.split(',')]
+    # using split function to convert input string into list
+    products = input("Please enter your product names, separated by commas:").split(",")
 
-    sorted_products = sorted(product) #sort the list
 
-    print("\nThank you for providing the product names.\n")
-    print("Here is the sorted list of product names:\n")
+    sorted_products = sort_product(products)
+
     for name in sorted_products:
         print("-", name)
 
+    print("\nThank you for providing the product names.\n")
+    print("Here is the sorted list of product names:\n")
+
 if __name__ == "__main__":
-    product_listing()
+    main()
