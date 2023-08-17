@@ -31,7 +31,7 @@ def main():
     print("\nThank you for providing the text for analysis.")
     print("Here is the character frequency analysis:")
     for char, frequency in frequency_analysis.items():
-        print(f"- '{char}' occurs {frequency} time{'s' if frequency > 1 else ''}")
+        print(f"- '{char}' occurs {frequency} time {'s' if frequency > 1 else ''}")
 
 
 if __name__ == "__main__":
