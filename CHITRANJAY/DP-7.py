@@ -20,7 +20,6 @@ def analyze_character_frequency(text):
             char_frequency[char] += 1
         else:
             char_frequency[char] = 1
-
     return char_frequency
 
 
