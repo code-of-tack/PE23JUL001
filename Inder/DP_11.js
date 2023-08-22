@@ -8,35 +8,29 @@ The program will provide users with immediate feedback regarding the palindromic
 along with additional functionality to enhance their language analysis capabilities. */
 
 
-function checkpalindrome(string) {
-    let temp = string.toLowerCase();
-    let newString = string.split("").reverse().join("").toLowerCase();    
-
-    if(temp == newString){
-        return true;
+function isPalindrome(string) {
+    const formattedStr = string.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+  
+    const reversedStr = formattedStr.split('').reverse().join('');
+  
+    return formattedStr === reversedStr;
+  }
+  
+  
+  
+  function palindrom(){
+    const inputStr = prompt("Please enter a string to check if it's a palindrome:")
+  
+    if(inputStr.trim() === ''){
+        console.log('No string provided.');
+        return;
     }
-}
-
-
-
-function palindrom(){
-    console.log('Welcome to SocialConnect Language Analysis!');
-    console.log("Please enter a string to check if it's a palindrome:");
-
-    const string = prompt("Enter the string");
+  
+    const isPal = isPalindrome(inputStr);
     
-    if(string){
-        console.log('Thank you for the providing the string');
-        const result = checkpalindrome(string);
-
-        if(result){
-             console.log(`The string "${string}" is palindrome`);
-        }
-        else {
-             console.log(`The string "${string}" is not palindrome`)
-        }
-    }
-
-}
-
-palindrom();
+    console.log('Thank you for the providing the string');
+    console.log(`The string "${inputStr}" is ${isPal ? '': ' not'} palindrome`);
+  
+  }
+  
+  palindrom();
