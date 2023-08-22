@@ -9,7 +9,7 @@ along with additional functionality to enhance their language analysis capabilit
 
 
 function isPalindrome(string) {
-    const formattedStr = string.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+    const formattedStr = string.replace(/[^a-zA-Z0-9]/g, '').toLower
   
     const reversedStr = formattedStr.split('').reverse().join('');
   
