@@ -13,6 +13,7 @@ def quote_sharing():
     quote = input("Please enter your quote:")
 
     print("Thank you for sharing your quote.")
+
     #reverse the string of quote
     reversed_quote = quote[::-1]
     print(f"Here is your quote in reverse:{reversed_quote}")
