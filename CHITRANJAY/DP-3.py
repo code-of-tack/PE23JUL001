@@ -11,7 +11,6 @@ along with additional functionality to enhance their financial planning capabili
 def generate_fibonacci_sequence(n):
     """
     Generates the Fibonacci sequence up to a given number 'n'.
-        List[int]: The Fibonacci sequence up to the given number 'n'.
     """
     sequence = [0, 1]  # Initialize the sequence with the first two numbers
 
