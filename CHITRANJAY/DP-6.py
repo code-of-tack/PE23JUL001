@@ -19,3 +19,5 @@ def quote_sharing():
     print(f"Here is your quote in reverse:{reversed_quote}")
 
 if __name__ == "__main__":
+
+    quote_sharing()
