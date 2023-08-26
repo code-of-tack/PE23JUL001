@@ -1,4 +1,3 @@
-
 """
 You are part of a team developing a mobile gaming app called "DiceMaster."
 As part of this app, you have been assigned the task of creating a feature that simulates a simple dice game,
