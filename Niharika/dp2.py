@@ -17,6 +17,6 @@ def main():
     print(f"The sentence \"{sentence}\" contains {num_vowels} vowels.")
 
 if __name__ == "__main__":
-    main()
+    main
         
         
