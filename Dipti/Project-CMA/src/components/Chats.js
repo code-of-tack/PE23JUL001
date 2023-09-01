@@ -12,10 +12,7 @@ const Chats = () => {
     const history = useHistory();
     const { user } = useAuth();
     const [loading, setLoading] = useState(true);
-   
-    console.log('fetched user',user);
-
-
+  
     const handleLogout = async () => {
         await auth.signOut();
         history.push('/');
@@ -101,7 +98,6 @@ const Chats = () => {
                              }
                         ))
                         message.text = message.text + "\n" + currentTime;
-                        console.log(message.text)
                         }}
                         />
             
