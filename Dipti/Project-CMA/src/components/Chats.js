@@ -90,7 +90,6 @@ const Chats = () => {
                         chatId = {user.uid}
 
                         onNewMessage={(chatId, message) => {   
-                        console.log(chatId,message);
                        
                         let currentTime = new Date(message.created.toLocaleString('en-US', {
                             hour: 'numeric',
